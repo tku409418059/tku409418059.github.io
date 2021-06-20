@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style> 
+        input {margin-left: 1em;}
+    </style>
+    <script>
+        
+    function tree(){
+        
+      var n = prompt("ENTER NUMBER","EX:1"); 
+      let string = "";
+    
+      for (let i = 1; i <= n; i++) {
+      
+       for (let j = n; j > i; j--) {
+          string += " ";
+        }
+      
+        for (let k = 0; k < i * 2 - 1; k++) {
+          string += "*";
+        }
+        string += "<br>";
+      }
+        
+      for(y=0;y<n;y++){
+        for(let x=1;x<n;x++){
+        
+            string += " ";
+        }
+        string += "*";
+        string += "<br>";
+      }
+      document.write(`<pre>${string}</pre>`);
+    }
+        
+    </script>
+    
+</head>
+
+<body>
+    <button onclick="tree()">點擊輸入數字</button>
+</body>
+
+</html>
+
+
+
